@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="https://www10.0zz0.com/2024/04/03/23/509583092.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Text to Image Converter | AI Tool</title>
+<meta name="description" content="Convert text to images for free using our AI-powered tool. Easily create stunning visuals with no cost.">
+<meta name="keywords" content="free text to image converter, AI text to image, convert text to image online, text to image generator">
+<link rel="canonical" href="https://www.yourwebsite.com/text-to-image-converter">
+
+<!-- Add Open Graph meta tags for better social sharing -->
+<meta property="og:title" content="Free Text to Image Converter | AI Tool">
+<meta property="og:description" content="Convert text to images for free using our AI-powered tool. Easily create stunning visuals with no cost.">
+<meta property="og:image" content="https://www.yourwebsite.com/images/og-image.jpg">
+<meta property="og:url" content="https://www.yourwebsite.com/text-to-image-converter">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card meta tags for better Twitter sharing -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Text to Image Converter | AI Tool">
+<meta name="twitter:description" content="Convert text to images for free using our AI-powered tool. Easily create stunning visuals with no cost.">
+<meta name="twitter:image" content="https://www.yourwebsite.com/images/twitter-card-image.jpg">
+
+<style>
+/* Your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+textarea {
+    width: 80%;
+    max-width: 600px;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+}
+.convert-btn {
+    background-color: #fff;
+    color: #4e54c8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+.convert-btn:hover {
+    background-color: #8f94fb;
+    color: #fff;
+}
+.loading-text {
+    margin-top: 20px;
+    font-size: 16px;
+    display: none;
+}
+.image-container {
+    margin-top: 20px;
+    display: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.download-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4e54c8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.download-btn:hover {
+    background-color: #8f94fb;
+}
+   #menu {
+	background: linear-gradient(to right, #4e54c8, #8f94fb);;
+	background: linear-gradient(to bottom,  0 2px 4px rgba(0, 0, 0, 0.1); /* ضل للزر */,  #404040);
+	color: black;
+	height: 45px;
+	padding-left: 18px;
+	border-radius: 10px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+	
+}
+#menu ul {
+	width: 100%;
+	
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+	color: black;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+	
+	
+}
+#menu li a:hover {
+	color: #0099CC;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+	
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: ;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='index.html'>Home</a></li>
+  
+  
+    </li>
+    <li><a href='aboute.html'>About</a></li>
+    <li><a class='dropdown-arrow' href='terms.html'>Terms</a>
+  
+    </li>
+    <li><a href='privacy.html'>Privacy policy</a></li>
+  </ul>
+</nav>
+	<center  >
+		<img src=" https://www10.0zz0.com/2024/04/03/23/509583092.png" style="   width:30%;heaight:25%; " />
+		</center>
+    <h1>Free Text to Image Converter | AI Tool</h1>
+    <textarea id="textInput" placeholder="Enter your text here..."></textarea><br>
+    <button class="convert-btn" onclick="convertTextToImage()">Convert to Image</button><br>
+    <p class="loading-text" id="loadingText">Loading image...</p>
+    <div class="image-container" id="imageContainer"></div>
+    <a href="#" id="downloadLink" class="download-btn" download>Download Image</a>
+</div>
+
+<script>
+function _0x3643(_0x164728,_0x279dc1){const _0x5aab67=_0x5aab();return _0x3643=function(_0x364392,_0x22df1c){_0x364392=_0x364392-0x19e;let _0x1e0bc0=_0x5aab67[_0x364392];return _0x1e0bc0;},_0x3643(_0x164728,_0x279dc1);}function _0x5aab(){const _0x21d35d=['11cqLgdO','blob','createElement','none','Bearer\x20','1yNmLNL','block','25942390UawPBe','2627280BzCnHE','src','stringify','appendChild','innerHTML','9501900osrQMQ','easynegative','style','loadingText','createObjectURL','getElementById','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','Failed\x20to\x20fetch\x20image.','POST','value','2736396ZSUpTn','img','downloadLink','6679771DuXusw','display','9AGfsPk','1760388zRgBHU','6LvuLJM','4031769iLTknd'];_0x5aab=function(){return _0x21d35d;};return _0x5aab();}(function(_0x29cfb3,_0xc6ec1e){const _0x578070=_0x3643,_0x464cfd=_0x29cfb3();while(!![]){try{const _0x33906a=parseInt(_0x578070(0x1ae))/0x1*(parseInt(_0x578070(0x1a6))/0x2)+parseInt(_0x578070(0x1a8))/0x3+-parseInt(_0x578070(0x1a0))/0x4+-parseInt(_0x578070(0x1b6))/0x5+-parseInt(_0x578070(0x1a7))/0x6*(parseInt(_0x578070(0x1a3))/0x7)+-parseInt(_0x578070(0x1b1))/0x8*(parseInt(_0x578070(0x1a5))/0x9)+-parseInt(_0x578070(0x1b0))/0xa*(-parseInt(_0x578070(0x1a9))/0xb);if(_0x33906a===_0xc6ec1e)break;else _0x464cfd['push'](_0x464cfd['shift']());}catch(_0x247303){_0x464cfd['push'](_0x464cfd['shift']());}}}(_0x5aab,0xe83ae));async function convertTextToImage(){const _0x121cb3=_0x3643,_0x3bbcee=_0x121cb3(0x1bc),_0x33d46e=document['getElementById']('textInput')[_0x121cb3(0x19f)],_0x389e21=document[_0x121cb3(0x1bb)](_0x121cb3(0x1b9));_0x389e21[_0x121cb3(0x1b8)][_0x121cb3(0x1a4)]=_0x121cb3(0x1af);try{const _0x558747=await fetch('https://api-inference.huggingface.co/models/prompthero/openjourney-v4',{'method':_0x121cb3(0x19e),'headers':{'Authorization':_0x121cb3(0x1ad)+_0x3bbcee,'Content-Type':'application/json'},'body':JSON[_0x121cb3(0x1b3)]({'inputs':_0x33d46e,'parameters':{'negative_prompt':_0x121cb3(0x1b7)}})});if(!_0x558747['ok'])throw new Error(_0x121cb3(0x1bd));const _0x15f5a7=await _0x558747[_0x121cb3(0x1aa)](),_0x40a8b5=URL[_0x121cb3(0x1ba)](_0x15f5a7),_0x810ff4=document[_0x121cb3(0x1ab)](_0x121cb3(0x1a1));_0x810ff4[_0x121cb3(0x1b2)]=_0x40a8b5;const _0x468bd1=document[_0x121cb3(0x1bb)]('imageContainer');_0x468bd1[_0x121cb3(0x1b5)]='',_0x468bd1[_0x121cb3(0x1b4)](_0x810ff4),_0x468bd1[_0x121cb3(0x1b8)][_0x121cb3(0x1a4)]=_0x121cb3(0x1af);const _0x2061f0=document[_0x121cb3(0x1bb)](_0x121cb3(0x1a2));_0x2061f0['href']=_0x40a8b5,_0x389e21[_0x121cb3(0x1b8)]['display']=_0x121cb3(0x1ac);}catch(_0x296ab6){console['error']('Error:',_0x296ab6),_0x389e21['style'][_0x121cb3(0x1a4)]=_0x121cb3(0x1ac);}}
+</script>
+</body>
+</html>
