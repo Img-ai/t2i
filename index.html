@@ -228,11 +228,31 @@ img {
     <button class="convert-btn" onclick="convertTextToImage()">Convert to Image</button><br>
     <p class="loading-text" id="loadingText">Loading image...</p>
     <div class="image-container" id="imageContainer"></div>
-    <a href="#" id="downloadLink" class="download-btn" download>Download Image</a>
+       <a href="#" id="downloadButton" class="download-btn" download>Download Image</a>
 </div>
 
 <script>
 function _0x3643(_0x164728,_0x279dc1){const _0x5aab67=_0x5aab();return _0x3643=function(_0x364392,_0x22df1c){_0x364392=_0x364392-0x19e;let _0x1e0bc0=_0x5aab67[_0x364392];return _0x1e0bc0;},_0x3643(_0x164728,_0x279dc1);}function _0x5aab(){const _0x21d35d=['11cqLgdO','blob','createElement','none','Bearer\x20','1yNmLNL','block','25942390UawPBe','2627280BzCnHE','src','stringify','appendChild','innerHTML','9501900osrQMQ','easynegative','style','loadingText','createObjectURL','getElementById','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','Failed\x20to\x20fetch\x20image.','POST','value','2736396ZSUpTn','img','downloadLink','6679771DuXusw','display','9AGfsPk','1760388zRgBHU','6LvuLJM','4031769iLTknd'];_0x5aab=function(){return _0x21d35d;};return _0x5aab();}(function(_0x29cfb3,_0xc6ec1e){const _0x578070=_0x3643,_0x464cfd=_0x29cfb3();while(!![]){try{const _0x33906a=parseInt(_0x578070(0x1ae))/0x1*(parseInt(_0x578070(0x1a6))/0x2)+parseInt(_0x578070(0x1a8))/0x3+-parseInt(_0x578070(0x1a0))/0x4+-parseInt(_0x578070(0x1b6))/0x5+-parseInt(_0x578070(0x1a7))/0x6*(parseInt(_0x578070(0x1a3))/0x7)+-parseInt(_0x578070(0x1b1))/0x8*(parseInt(_0x578070(0x1a5))/0x9)+-parseInt(_0x578070(0x1b0))/0xa*(-parseInt(_0x578070(0x1a9))/0xb);if(_0x33906a===_0xc6ec1e)break;else _0x464cfd['push'](_0x464cfd['shift']());}catch(_0x247303){_0x464cfd['push'](_0x464cfd['shift']());}}}(_0x5aab,0xe83ae));async function convertTextToImage(){const _0x121cb3=_0x3643,_0x3bbcee=_0x121cb3(0x1bc),_0x33d46e=document['getElementById']('textInput')[_0x121cb3(0x19f)],_0x389e21=document[_0x121cb3(0x1bb)](_0x121cb3(0x1b9));_0x389e21[_0x121cb3(0x1b8)][_0x121cb3(0x1a4)]=_0x121cb3(0x1af);try{const _0x558747=await fetch('https://api-inference.huggingface.co/models/prompthero/openjourney-v4',{'method':_0x121cb3(0x19e),'headers':{'Authorization':_0x121cb3(0x1ad)+_0x3bbcee,'Content-Type':'application/json'},'body':JSON[_0x121cb3(0x1b3)]({'inputs':_0x33d46e,'parameters':{'negative_prompt':_0x121cb3(0x1b7)}})});if(!_0x558747['ok'])throw new Error(_0x121cb3(0x1bd));const _0x15f5a7=await _0x558747[_0x121cb3(0x1aa)](),_0x40a8b5=URL[_0x121cb3(0x1ba)](_0x15f5a7),_0x810ff4=document[_0x121cb3(0x1ab)](_0x121cb3(0x1a1));_0x810ff4[_0x121cb3(0x1b2)]=_0x40a8b5;const _0x468bd1=document[_0x121cb3(0x1bb)]('imageContainer');_0x468bd1[_0x121cb3(0x1b5)]='',_0x468bd1[_0x121cb3(0x1b4)](_0x810ff4),_0x468bd1[_0x121cb3(0x1b8)][_0x121cb3(0x1a4)]=_0x121cb3(0x1af);const _0x2061f0=document[_0x121cb3(0x1bb)](_0x121cb3(0x1a2));_0x2061f0['href']=_0x40a8b5,_0x389e21[_0x121cb3(0x1b8)]['display']=_0x121cb3(0x1ac);}catch(_0x296ab6){console['error']('Error:',_0x296ab6),_0x389e21['style'][_0x121cb3(0x1a4)]=_0x121cb3(0x1ac);}}
 </script>
+	<div class="overlay" id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.9); z-index: 1000;"></div>
+
+<div class="modal" id="modal" style="height:140px;display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; padding: 20px; background-color: #ffffff; border: 2px solid #007bff; border-radius: 10px; z-index: 1001;">
+  <span class="close-icon" id="closeButton" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 20px; color: #007bff;">&times;</span>
+  <p>1- Press the three dots (&vellip;) at the top of the screen.</p>
+  <p>2- Press "Add to Home Screen".</p>
+</div>
+
+<script>
+  document.getElementById('downloadButton').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
+  });
+
+  document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
