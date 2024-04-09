@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="YQdcVmZz6LlhIYurWi6FLsR_O_NZ2GNPqKbnjra5ios" />
-	
 	<link rel="icon" href="https://www10.0zz0.com/2024/04/03/23/509583092.png" type="image/x-icon">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -203,23 +201,6 @@ img {
 	#menu input:checked ~ ul {display:block}
 }
 </style>
-	  <script>
-    // استرجاع عدد النقرات من Local Storage إذا كانت هناك قيمة مخزنة مسبقًا
-    let clickCount = localStorage.getItem('clickCount') || 0;
-
-    function incrementCounter() {
-      clickCount++;
-      document.getElementById('counter').innerText = clickCount;
-
-      // تخزين عدد النقرات في Local Storage
-      localStorage.setItem('clickCount', clickCount);
-    }
-
-    // تحديث العداد عند تحميل الصفحة
-    window.onload = function() {
-      document.getElementById('counter').innerText = clickCount;
-    };
-  </script>
 </head>
 <body>
 <div class="container">
