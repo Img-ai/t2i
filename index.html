@@ -210,6 +210,23 @@ img {
 	#menu input:checked + label:before {content:"\00d7"}
 	#menu input:checked ~ ul {display:block}
 }
+	#profile-pic-container {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 2px solid linear-gradient(to right, #4e54c8, #8f94fb);
+            margin-bottom: 10px;
+        }
+
+        #profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
 </style>
 </head>
 <body>
